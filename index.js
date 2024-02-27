@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 app.post('/save', (req, res) => {
-    const url = 'mongodb+srv://root:AOINeKdnaADyEv4U@cluster0.cefigcf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+    const url = 'mongodb+srv://root:%PASSWORD%@cluster0.cefigcf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
     const client = new MongoClient(url);
     const db = client.db('emsmerndb');
     const coll = db.collection('employee');
@@ -19,7 +19,7 @@ app.post('/save', (req, res) => {
 })
 
 app.get('/read', (req, res) => {
-    const url = 'mongodb+srv://root:AOINeKdnaADyEv4U@cluster0.cefigcf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+    const url = 'mongodb+srv://root:%PASSWORD%@cluster0.cefigcf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
     const client = new MongoClient(url);
     const db = client.db('emsmerndb');
     const coll = db.collection('employee');
@@ -30,7 +30,7 @@ app.get('/read', (req, res) => {
 })
 
 app.put('/modify', (req, res) => {
-    const url = 'mongodb+srv://root:AOINeKdnaADyEv4U@cluster0.cefigcf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+    const url = 'mongodb+srv://root:%PASSWORD%@cluster0.cefigcf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
     const client = new MongoClient(url);
     const db = client.db('emsmerndb');
     const coll = db.collection('employee');
@@ -41,7 +41,7 @@ app.put('/modify', (req, res) => {
 })
 
 app.delete('/remove', (req, res) => {
-    const url = 'mongodb+srv://root:AOINeKdnaADyEv4U@cluster0.cefigcf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+    const url = 'mongodb+srv://root:%PASSWORD%@cluster0.cefigcf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
     const client = new MongoClient(url);
     const db = client.db('emsmerndb');
     const coll = db.collection('employee');
